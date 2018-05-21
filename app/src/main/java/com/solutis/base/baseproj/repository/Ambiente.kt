@@ -10,7 +10,7 @@ package com.solutis.base.baseproj.repository
     fun getUrl(): String {
         return when(this) {
             PRODUCAO -> ""
-            DESENVOLVIMENTO -> "http://despero.solutis.net.br:9080/<Sua Base URL>/"
+            DESENVOLVIMENTO -> "http://despero:9080/<Sua Base URL>/"
             HOMOLOGACAO -> ""
         }
     }
