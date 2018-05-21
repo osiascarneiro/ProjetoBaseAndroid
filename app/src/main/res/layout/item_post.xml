@@ -18,6 +18,7 @@
             android:layout_height="wrap_content"
             android:textSize="14sp"
             android:layout_marginBottom="4dp"
+            android:textStyle="bold"
             android:text="@{data.title}"/>
 
         <TextView
