@@ -17,12 +17,4 @@ abstract class BancoLocal : RoomDatabase() {
 
     abstract fun usuarioDao(): UsuarioDao
 
-    override fun createOpenHelper(config: DatabaseConfiguration?): SupportSQLiteOpenHelper {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
-
-    override fun createInvalidationTracker(): InvalidationTracker {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
-
 }
