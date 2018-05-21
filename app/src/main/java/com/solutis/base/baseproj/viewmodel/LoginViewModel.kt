@@ -2,9 +2,10 @@ package br.com.sabesp.redesabesp.viewmodel
 
 import android.arch.lifecycle.MutableLiveData
 import android.content.SharedPreferences
-import com.solutis.base.baseproj.model.consulta.LoginConsulta
-import com.solutis.base.baseproj.model.entidade.Usuario
-import com.solutis.base.baseproj.model.local.BancoLocal
+import com.solutis.base.baseproj.common.extension.androidSubscribe
+import com.solutis.base.baseproj.model.service.remote.LoginConsulta
+import com.solutis.base.baseproj.model.entity.Usuario
+import com.solutis.base.baseproj.model.service.local.BancoLocal
 import io.reactivex.Single
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
@@ -31,8 +32,7 @@ class LoginViewModel : BaseViewModel {
 
     fun login(usuario: String, senha: String) {
         disposables.add(service.login(LoginConsulta(usuario, senha))
-                .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
+                .androidSubscribe()
                 .doOnSubscribe { status.value = true }
                 .doFinally { status.value = false }
                 .subscribe(

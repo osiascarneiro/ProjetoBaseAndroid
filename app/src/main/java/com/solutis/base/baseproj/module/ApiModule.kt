@@ -6,7 +6,7 @@ import android.content.SharedPreferences
 import android.preference.PreferenceManager
 import com.solutis.base.baseproj.BuildConfig
 import com.solutis.base.baseproj.model.Service
-import com.solutis.base.baseproj.model.local.BancoLocal
+import com.solutis.base.baseproj.model.service.local.BancoLocal
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient

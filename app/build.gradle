@@ -15,7 +15,7 @@ android {
     }
     buildTypes {
         debug {
-            buildConfigField "String", "SERVER_URL", '"http://<servidor de desenvolvimento>/<Sua base URL>/"'
+            buildConfigField "String", "SERVER_URL", '"https://jsonplaceholder.typicode.com/"'
         }
 
         homolog {

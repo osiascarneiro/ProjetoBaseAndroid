@@ -1,4 +1,4 @@
-package com.solutis.base.baseproj.model.consulta
+package com.solutis.base.baseproj.model.service.remote
 
 import com.google.gson.annotations.SerializedName
 

@@ -1,6 +1,7 @@
 package br.com.sabesp.redesabesp.module
 
 import com.solutis.base.baseproj.view.activity.LoginActivity
+import com.solutis.base.baseproj.view.activity.PostsActivity
 import dagger.Component
 import javax.inject.Singleton
 
@@ -13,4 +14,5 @@ import javax.inject.Singleton
 interface ApiComponent {
 
     fun inject(activity: LoginActivity)
+    fun inject(activity: PostsActivity)
 }
