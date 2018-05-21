@@ -14,7 +14,17 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
+        debug {
+            buildConfigField "String", "SERVER_URL", '"http://<servidor de desenvolvimento>/<Sua base URL>/"'
+        }
+
+        homolog {
+            initWith debug
+            buildConfigField "String", "SERVER_URL", '"http://<servidor de homologacao>/<Sua base URL>/"'
+        }
+
         release {
+            buildConfigField "String", "SERVER_URL", '"http://<servidor de producao>/<Sua base URL>/"'
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }

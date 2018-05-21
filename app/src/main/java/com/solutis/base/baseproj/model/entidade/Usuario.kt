@@ -1,4 +1,4 @@
-package com.solutis.base.baseproj.repository.entidade
+package com.solutis.base.baseproj.model.entidade
 
 import android.arch.persistence.room.ColumnInfo
 import android.arch.persistence.room.Entity

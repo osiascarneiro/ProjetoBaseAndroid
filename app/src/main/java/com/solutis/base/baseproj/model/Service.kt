@@ -1,7 +1,7 @@
-package com.solutis.base.baseproj.repository
+package com.solutis.base.baseproj.model
 
-import com.solutis.base.baseproj.repository.consulta.LoginConsulta
-import com.solutis.base.baseproj.repository.entidade.Usuario
+import com.solutis.base.baseproj.model.consulta.LoginConsulta
+import com.solutis.base.baseproj.model.entidade.Usuario
 import io.reactivex.Single
 import retrofit2.http.Body
 import retrofit2.http.Headers

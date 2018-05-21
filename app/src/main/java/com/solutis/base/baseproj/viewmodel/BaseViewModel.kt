@@ -2,7 +2,7 @@ package br.com.sabesp.redesabesp.viewmodel
 
 import android.arch.lifecycle.ViewModel
 import android.util.Log
-import com.solutis.base.baseproj.repository.Service
+import com.solutis.base.baseproj.model.Service
 import io.reactivex.disposables.CompositeDisposable
 import javax.inject.Inject
 

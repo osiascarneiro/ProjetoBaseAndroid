@@ -4,9 +4,9 @@ import android.arch.persistence.room.Room
 import android.content.Context
 import android.content.SharedPreferences
 import android.preference.PreferenceManager
-import com.solutis.base.baseproj.repository.Ambiente
-import com.solutis.base.baseproj.repository.Service
-import com.solutis.base.baseproj.repository.local.BancoLocal
+import com.solutis.base.baseproj.BuildConfig
+import com.solutis.base.baseproj.model.Service
+import com.solutis.base.baseproj.model.local.BancoLocal
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient
@@ -25,7 +25,7 @@ import javax.inject.Singleton
 class ApiModule(val context: Context) {
 
     @Provides
-    fun getAmbiente(): Ambiente = Ambiente.DESENVOLVIMENTO
+    fun getAmbiente(): String = BuildConfig.SERVER_URL
 
     @Provides
     @Singleton
@@ -46,7 +46,7 @@ class ApiModule(val context: Context) {
         return Retrofit.Builder()
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-                .baseUrl(ambiente.getUrl())
+                .baseUrl(ambiente)
                 .client(httpClient)
                 .build()
     }

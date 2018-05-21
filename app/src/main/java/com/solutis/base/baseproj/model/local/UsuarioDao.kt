@@ -1,8 +1,8 @@
-package com.solutis.base.baseproj.repository.local
+package com.solutis.base.baseproj.model.local
 
 import android.arch.lifecycle.LiveData
 import android.arch.persistence.room.*
-import com.solutis.base.baseproj.repository.entidade.Usuario
+import com.solutis.base.baseproj.model.entidade.Usuario
 
 /**
  * Created by osias on 06/12/2017.

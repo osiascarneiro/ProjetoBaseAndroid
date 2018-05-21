@@ -2,9 +2,9 @@ package br.com.sabesp.redesabesp.viewmodel
 
 import android.arch.lifecycle.MutableLiveData
 import android.content.SharedPreferences
-import com.solutis.base.baseproj.repository.consulta.LoginConsulta
-import com.solutis.base.baseproj.repository.entidade.Usuario
-import com.solutis.base.baseproj.repository.local.BancoLocal
+import com.solutis.base.baseproj.model.consulta.LoginConsulta
+import com.solutis.base.baseproj.model.entidade.Usuario
+import com.solutis.base.baseproj.model.local.BancoLocal
 import io.reactivex.Single
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
