@@ -45,8 +45,8 @@ class LoginActivity : AppCompatActivity() {
 
         loginBtn.setOnClickListener {
             when {
-                TextUtils.isEmpty(usuario.text) -> usuario.error = "Informe o usuário"
-                TextUtils.isEmpty(senha.text) -> senha.error = "Informe a senha"
+                TextUtils.isEmpty(usuario.text) -> usuario.error = getString(R.string.error_usuario)
+                TextUtils.isEmpty(senha.text) -> senha.error = getString(R.string.error_senha)
                 else -> viewModel?.login(usuario.text.toString(), senha.text.toString())
             }
         }
@@ -57,7 +57,7 @@ class LoginActivity : AppCompatActivity() {
             val loadingFlag = it ?: false
 
             loading.visibility = if (loadingFlag) View.VISIBLE else View.GONE
-            loginBtn.text = if (loadingFlag) "" else "Entrar"
+            loginBtn.text = if (loadingFlag) "" else getString(R.string.login)
         })
     }
 

@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">BaseProj</string>
+    <string name="error_usuario">Informe o usuário</string>
+    <string name="error_senha">Informe a senha</string>
+    <string name="login">Entrar</string>
 </resources>
