@@ -1,6 +1,9 @@
 <resources>
-    <string name="app_name">BaseProj</string>
+    <string name="app_name">Projeto Base</string>
     <string name="error_usuario">Informe o usuário</string>
     <string name="error_senha">Informe a senha</string>
     <string name="login">Entrar</string>
+    <string name="usuario">Usuário</string>
+    <string name="senha">Senha</string>
+    <string name="entrar">Entrar</string>
 </resources>

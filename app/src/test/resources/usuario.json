@@ -1,0 +1,9 @@
+{
+  "token_type": "Bearer",
+  "foto": "",
+  "login": "jhon.doe",
+  "nome": "João das Neves",
+  "email": "foo@email.com.br",
+  "matricula": "1161800",
+  "access_token": "bd122f49edc47f82a00f83aa8c4f87fc"
+}
