@@ -1,6 +1,7 @@
 package br.com.baseproject.module
 
 import br.com.baseproject.BaseProjectApplication
+import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjector
 import dagger.android.support.AndroidSupportInjectionModule
@@ -16,7 +17,9 @@ import javax.inject.Singleton
                       ApiModule::class])
 interface ApiComponent: AndroidInjector<BaseProjectApplication> {
 
-    @Component.Builder
-    abstract class Builder : AndroidInjector.Builder<BaseProjectApplication>()
+    @Component.Factory
+    interface Builder : AndroidInjector.Factory<BaseProjectApplication> {
+        override fun create(@BindsInstance instance: BaseProjectApplication): AndroidInjector<BaseProjectApplication>
+    }
 
 }

@@ -12,7 +12,7 @@ import javax.inject.Inject
  * Classe base do projeto,
  * sempre chamar o super do oncreate antes de usar a classe de viewmodel
  */
-abstract class BaseActivity<T: BaseViewModel>: AppCompatActivity() {
+abstract class BaseActivity<T: BaseViewModel>(private val cls: Class<T>): AppCompatActivity() {
 
     @Inject
     lateinit var viewModelFactory: ViewModelFactory<T>
@@ -21,13 +21,13 @@ abstract class BaseActivity<T: BaseViewModel>: AppCompatActivity() {
      * ViewModel da tela, cada activity deve ter uma.
      * Inicializar na classe específica
      */
-    abstract var viewModel: T
+    lateinit var viewModel: T
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         AndroidInjection.inject(this)
         viewModel = ViewModelProviders.of(this, viewModelFactory)
-                .get(viewModel.javaClass)
+                .get(cls)
     }
 
 }

@@ -14,9 +14,7 @@ import kotlinx.android.synthetic.main.activity_login.*
  * Created by osiascarneiro on 08/11/17.
  */
 
-class LoginActivity : BaseActivity<LoginViewModel>() {
-
-    override var viewModel: LoginViewModel = LoginViewModel()
+class LoginActivity :BaseActivity<LoginViewModel>(LoginViewModel::class.java) {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -10,6 +10,8 @@ import dagger.android.support.DaggerApplication
 
 class BaseProjectApplication: DaggerApplication() {
 
-    override fun applicationInjector(): AndroidInjector<out DaggerApplication> = DaggerApiComponent.builder().create(this)
+    override fun applicationInjector(): AndroidInjector<out DaggerApplication> = DaggerApiComponent
+                                                                                    .factory()
+                                                                                    .create(this)
 
 }

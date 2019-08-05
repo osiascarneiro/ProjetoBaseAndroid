@@ -8,9 +8,8 @@ import br.com.baseproject.viewmodel.PostsViewModel
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_posts.*
 
-class PostsActivity: BaseActivity<PostsViewModel>() {
+class PostsActivity: BaseActivity<PostsViewModel>(PostsViewModel::class.java) {
 
-    override var viewModel = PostsViewModel()
     var adapter = PostsAdapter()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,7 +20,7 @@ class PostsActivity: BaseActivity<PostsViewModel>() {
         viewModel.getPosts()
     }
 
-    fun doBindings() {
+    private fun doBindings() {
         viewModel.posts.observe(this, Observer {
             adapter.posts = it ?: listOf()
         })

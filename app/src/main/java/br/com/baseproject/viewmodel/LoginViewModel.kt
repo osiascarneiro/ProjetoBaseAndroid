@@ -2,6 +2,7 @@ package br.com.baseproject.viewmodel
 
 import android.content.SharedPreferences
 import androidx.lifecycle.MutableLiveData
+import br.com.baseproject.model.Service
 import br.com.baseproject.model.consulta.LoginConsulta
 import br.com.baseproject.model.entidade.Usuario
 import br.com.baseproject.model.local.BancoLocal
@@ -14,13 +15,11 @@ import javax.inject.Inject
  * Created by osiascarneiro on 08/11/17.
  */
 
-class LoginViewModel @Inject constructor(): BaseViewModel() {
-
-    @Inject
-    lateinit var localDb: BancoLocal
-
-    @Inject
-    lateinit var sharedPref: SharedPreferences
+class LoginViewModel @Inject constructor(
+        val localDb: BancoLocal,
+        val sharedPref: SharedPreferences,
+        val service: Service
+): BaseViewModel() {
 
     var usuario = MutableLiveData<Usuario>()
     var status = MutableLiveData<Boolean>()

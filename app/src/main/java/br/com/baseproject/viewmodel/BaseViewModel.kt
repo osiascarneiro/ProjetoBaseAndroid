@@ -14,9 +14,6 @@ abstract class BaseViewModel: ViewModel() {
 
     var disposables = CompositeDisposable()
 
-    @Inject
-    lateinit var service: Service
-
     override fun onCleared() {
         super.onCleared()
         disposables.clear()
